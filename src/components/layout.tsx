@@ -1,12 +1,10 @@
+import { PageRendererProps } from "gatsby"
 import React, { ReactNode } from "react"
 import styled from "styled-components"
 import { rhythm, styledScale } from "../utils/typography"
 import { FadeLink } from "./link"
 
-interface Props {
-  location: {
-    pathname: string
-  }
+interface Props extends PageRendererProps {
   title: string
   children: ReactNode
 }
@@ -52,7 +50,7 @@ export const Layout = (props: Props) => {
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
-        Gatsby
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
     </Content>
   )

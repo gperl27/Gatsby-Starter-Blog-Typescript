@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql, PageRendererProps } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import { Bio } from "../components/bio"
@@ -8,9 +8,8 @@ import { SEO } from "../components/seo"
 import { Query, SitePageContext } from "../graphql-types"
 import { rhythm, styledScale } from "../utils/typography"
 
-interface Props {
+interface Props extends PageRendererProps {
   pageContext: SitePageContext
-  location: any
   data: Query
 }
 

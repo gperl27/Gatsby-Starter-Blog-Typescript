@@ -3,12 +3,11 @@
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Greg Perlman <gperlman27@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@types/react-helmet": "^5.0.8",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.31",
     "gatsby-image": "^2.0.40",
@@ -51,6 +50,7 @@
     "@graphql-codegen/typescript-react-apollo": "1.1.1",
     "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
+    "@types/react-helmet": "^5.0.8",
     "@types/styled-components": "^4.1.14",
     "@types/typography": "^0.16.2",
     "graphql": "^14.2.1",
