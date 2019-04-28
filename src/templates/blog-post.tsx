@@ -1,8 +1,9 @@
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import { Bio } from "../components/bio"
 import { Layout } from "../components/layout"
+import { FadeLink } from "../components/link"
 import { SEO } from "../components/seo"
 import { Query, SitePageContext } from "../graphql-types"
 import { rhythm, styledScale } from "../utils/typography"
@@ -55,16 +56,16 @@ const BlogPostTemplate = (props: Props) => {
       <PostNavigator>
         <li>
           {previous && (
-            <Link to={previous.fields!.slug!} rel="prev">
+            <FadeLink to={previous.fields!.slug!} rel="prev">
               ← {previous.frontmatter!.title}
-            </Link>
+            </FadeLink>
           )}
         </li>
         <li>
           {next && (
-            <Link to={next.fields!.slug!} rel="next">
+            <FadeLink to={next.fields!.slug!} rel="next">
               {next.frontmatter!.title} →
-            </Link>
+            </FadeLink>
           )}
         </li>
       </PostNavigator>

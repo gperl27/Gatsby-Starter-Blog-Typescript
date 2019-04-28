@@ -15,7 +15,6 @@ export const createPages: GatsbyCreatePages = async ({
 }) => {
   const { createPage } = boundActionCreators
 
-  const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
   const allMarkdown = await graphql(`
     {
       allMarkdownRemark(
@@ -50,7 +49,7 @@ export const createPages: GatsbyCreatePages = async ({
     createPage({
       path: post.node.fields.slug,
       // tslint:disable-next-line:object-literal-sort-keys
-      component: blogPost,
+      component: path.resolve(`./src/templates/blog-post.tsx`),
       context: {
         next,
         previous,

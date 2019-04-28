@@ -1,7 +1,7 @@
-import { Link } from "gatsby"
 import React, { ReactNode } from "react"
 import styled from "styled-components"
 import { rhythm, styledScale } from "../utils/typography"
+import { FadeLink } from "./link"
 
 interface Props {
   location: {
@@ -22,7 +22,7 @@ const StyledH3 = styled.h3`
   margin-top: 0;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(FadeLink)`
   box-shadow: none;
   color: inherit;
   text-decoration: none;
