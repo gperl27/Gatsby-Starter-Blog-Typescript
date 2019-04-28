@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React, { ReactNode } from "react"
-import { rhythm, scale } from "../utils/typography"
-import { Test } from "./Test"
+import styled from "styled-components"
+import { rhythm, styledScale } from "../utils/typography"
 
 interface Props {
   location: {
@@ -11,71 +11,49 @@ interface Props {
   children: ReactNode
 }
 
+const StyledH1 = styled.h1`
+  ${styledScale(1.5)};
+  margin-bottom: ${rhythm(1.5)};
+  margin-top: 0;
+`
+
+const StyledH3 = styled.h3`
+  font-family: Montserrat, sans-serif;
+  margin-top: 0;
+`
+
+const StyledLink = styled(Link)`
+  box-shadow: none;
+  color: inherit;
+  text-decoration: none;
+`
+
+const Content = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${rhythm(24)};
+  padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
+`
+
 export const Layout = (props: Props) => {
   const { location, title, children } = props
   const rootPath = `/`
-  let header
 
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-            textDecoration: `none`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-            textDecoration: `none`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
-  }
+  const HeaderTitle = location.pathname === rootPath ? StyledH1 : StyledH3
 
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <header>{header}</header>
+    <Content>
+      <header>
+        <HeaderTitle>
+          <StyledLink to={`/`}>{title}</StyledLink>
+        </HeaderTitle>
+      </header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
-        Love
-        <Test />
+        Gatsby
       </footer>
-    </div>
+    </Content>
   )
 }

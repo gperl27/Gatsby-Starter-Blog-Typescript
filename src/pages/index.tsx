@@ -1,11 +1,20 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
 
+import styled from "styled-components"
 import { Bio } from "../components/bio"
 import { Layout } from "../components/layout"
 import { SEO } from "../components/seo"
 import { MarkdownRemark } from "../graphql-types"
 import { rhythm } from "../utils/typography"
+
+const StyledLink = styled(Link)`
+  box-shadow: none;
+`
+
+const Title = styled.h3`
+  margin-bottom: ${rhythm(1 / 4)};
+`
 
 const BlogIndex = (props: { location: { pathname: string } }) => {
   const data = useStaticQuery(graphql`
@@ -52,15 +61,9 @@ const BlogIndex = (props: { location: { pathname: string } }) => {
         const title = frontmatter.title || fields.slug
         return (
           <div key={slug}>
-            <h3
-              style={{
-                marginBottom: rhythm(1 / 4),
-              }}
-            >
-              <Link style={{ boxShadow: `none` }} to={slug}>
-                {title}
-              </Link>
-            </h3>
+            <Title>
+              <StyledLink to={slug}>{title}</StyledLink>
+            </Title>
             <small>{frontmatter.date}</small>
             <p
               dangerouslySetInnerHTML={{
