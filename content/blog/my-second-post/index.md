@@ -11,14 +11,3 @@ egg yolk will be less rich."?
 ([Wikipedia Link](http://en.wikipedia.org/wiki/Salted_duck_egg))
 
 Yeah, I didn't either.
-
-```javascript
-() => console.log('hey')
-() => console.log('hey')
-() => console.log('hey')
-() => console.log('hey')
-() => console.log('hey')
-() => console.log('hey')
-() => console.log('hey')
-() => console.log('hey')
-```
