@@ -1,7 +1,6 @@
 # Gatsby Starter Blog with Typescript
----
 
-This project attempts to make Gatsby's [starter blog](https://github.com/gatsbyjs/gatsby-starter-blog) type-safe. In addition, styled components are used favor of inline jsx styles.
+This project attempts to make Gatsby's [starter blog](https://github.com/gatsbyjs/gatsby-starter-blog) type-safe. In addition, styled components are used in favor of inline jsx styles.
 
 ## Features (in addition to the Gatsby Starter)
 
