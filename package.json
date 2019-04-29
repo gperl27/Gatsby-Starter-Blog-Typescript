@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "gatsby-starter-blog-typescript",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A starter gatsby blog using typescript",
   "version": "0.1.0",
   "author": "Greg Perlman <gperlman27@gmail.com>",
   "bugs": {
@@ -62,7 +62,7 @@
     "tslint-react": "^4.0.0",
     "typescript": "^3.4.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/gperl27/Gatsby-Starter-Blog-Typescript#readme",
   "keywords": [
     "gatsby"
   ],
@@ -70,7 +70,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/gperl27/Gatsby-Starter-Blog-Typescript.git"
   },
   "scripts": {
     "build": "gatsby build",
